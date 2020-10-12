@@ -2,4 +2,6 @@
     <string name="app_name">ProgramAndroid-1</string>
     <string name="signup_text">Don\'t have an account? Sign up now</string>
     <string name="forget_password">Forget Password?</string>
+    <string name="tab_one">Top</string>
+    <string name="tab_two">Bottom</string>
 </resources>

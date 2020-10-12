@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = ed_password.getText().toString().trim();
 
                 if (username.equals("admin") && password.equals("admin")){
-                    Intent intent = new Intent(MainActivity.this, HomeScreen.class);
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
                     finish();
                 }
