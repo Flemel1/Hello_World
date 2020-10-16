@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiManager;
 import android.os.Build;
-import android.widget.Toast;
 
 import androidx.core.app.NotificationCompat;
 

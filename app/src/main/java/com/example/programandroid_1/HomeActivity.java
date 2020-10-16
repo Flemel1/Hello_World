@@ -1,21 +1,18 @@
 package com.example.programandroid_1;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.programandroid_1.adapter.ViewPagerAdapter;
 import com.example.programandroid_1.databinding.ActivityHomeScreenBinding;
 import com.example.programandroid_1.receiver.WifiChangeReciever;
-import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
 
