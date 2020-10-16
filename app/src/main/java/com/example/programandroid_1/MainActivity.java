@@ -10,22 +10,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.programandroid_1.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
-    Button btn_login;
-    EditText ed_username, ed_password;
+
+    private  ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("13", "Debugging");
-        setContentView(R.layout.activity_main);
-        btn_login = findViewById(R.id.btn_login);
-        ed_username = findViewById(R.id.ed_username);
-        ed_password = findViewById(R.id.ed_password);
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = ed_username.getText().toString().trim();
-                String password = ed_password.getText().toString().trim();
+                String username = binding.edUsername.getText().toString().trim();
+                String password = binding.edPassword.getText().toString().trim();
 
                 if (username.equals("admin") && password.equals("admin")){
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
