@@ -61,9 +61,11 @@
         app:layout_constraintTop_toBottomOf="@id/btn_login"
         app:layout_constraintBottom_toTopOf="@id/text_forget_password"
         android:text="@string/signup_text"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:onClick="gotoSignupActivity"/>
 
     <TextView
         android:id="@+id/text_forget_password"
