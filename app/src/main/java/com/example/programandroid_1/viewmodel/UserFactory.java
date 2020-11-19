@@ -8,9 +8,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 public class UserFactory extends ViewModelProvider.NewInstanceFactory {
     private Application application;
+    private ViewModel viewModel;
 
     public UserFactory(Application application) {
         this.application = application;
+    }
+
+    public UserFactory(ViewModel viewModel) {
+        this.viewModel = viewModel;
     }
 
     @NonNull
@@ -18,6 +23,10 @@ public class UserFactory extends ViewModelProvider.NewInstanceFactory {
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         if (modelClass.isAssignableFrom(ViewModelUser.class)) {
             return (T) new ViewModelUser(application);
+        }
+        else if(modelClass.isAssignableFrom(ViewModelFireStore.class)) {
+            ViewModelFireStore viewModelFireStore = (ViewModelFireStore) viewModel;
+            return (T) viewModelFireStore;
         }
         return super.create(modelClass);
     }
