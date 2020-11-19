@@ -32,7 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         RecordItem record = recordItems.get(position);
         holder.posterImage.setImageResource(record.getIdImage());
         holder.titleText.setText(record.getTitle());

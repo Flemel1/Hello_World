@@ -43,4 +43,16 @@
         app:layout_constraintTop_toBottomOf="@id/btn_start_job"
         app:layout_constraintVertical_bias="0.18" />
 
+    <Button
+        android:id="@+id/btn_crud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stop_job"
+        app:layout_constraintVertical_bias="0.144"
+        android:text="CRUD"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

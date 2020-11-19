@@ -1,6 +1,7 @@
 package com.example.programandroid_1.adapter;
 
 import android.content.Context;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,10 +17,12 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     private final int[] TAB_TITLES = new int[]{R.string.tab_one, R.string.tab_two};
     private final Context mContext;
+    private FragmentManager fragmentManager;
 
     public ViewPagerAdapter(Context context, @NonNull FragmentManager fm) {
         super(fm);
         mContext = context;
+        fragmentManager = fm;
     }
 
     @NonNull
